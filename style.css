@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -294,26 +295,40 @@ body.crazy-bg {
    ========================================= */
 @media (max-width: 768px) {
     .header {
-        padding: 10px 15px;
+        padding: 10px;
+        flex-direction: column;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .title-section {
+        align-items: center;
+        text-align: center;
     }
 
     .header h1 {
-        font-size: 1.4rem;
+        font-size: 2rem;
+        justify-content: center;
         gap: 5px;
     }
 
     .header h1 img {
-        width: 30px !important;
-        height: 30px !important;
+        width: 32px !important;
+        height: 32px !important;
     }
 
     .title-section .level-indicator {
-        font-size: 1.3rem !important;
+        font-size: 1.5rem !important;
+        text-align: center;
+    }
+    
+    .stats-section {
+        align-items: center;
     }
 
     .score-board {
-        font-size: 1.1rem;
-        padding: 6px 15px;
+        font-size: 1.3rem;
+        padding: 8px 25px;
     }
 
     .start-content {
