@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бебе блин блинский</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Fredoka:wght@500;600&family=Nunito:wght@700;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="startScreen" class="start-screen">
+        <div class="start-content">
+            <h2>окак</h2>
+            <p>короче тут нада просто тыкать на барашка.<br>он будет носиться по экрану, а ты лови и тапай.
+            </p>
+            <p class="credits">создатель Кай и сделал это от скуки для бебе ✌️</p>
+            <button id="startBtn" class="start-btn">Продолжить</button>
+        </div>
+    </div>
+
+    <div class="game-container">
+        <header class="header">
+            <div class="title-section">
+                <h1>Бебе блин блинский <img src="https://raw.githubusercontent.com/iamcal/emoji-data/master/img-apple-160/1f411.png" alt="🐑" style="width: 40px; height: 40px;"></h1>
+                <div class="level-indicator" style="font-family: 'Caveat', cursive; font-size: 1.8rem; border: none; background: transparent; padding: 0;">
+                    Состояние: <span id="mood" style="color: #ff4081;">Чилит 🌴</span>
+                </div>
+            </div>
+            
+            <div class="stats-section">
+                <div class="score-board">
+                    <span>Тапнуто: </span>
+                    <span id="score">0</span>
+                </div>
+            </div>
+        </header>
+
+        <main class="play-area" id="playArea">
+            <div id="bebe" class="sheep-bubble">
+                <img src="https://raw.githubusercontent.com/iamcal/emoji-data/master/img-apple-160/1f411.png" alt="Бебе"
+                    class="sheep-emoji">
+            </div>
+        </main>
+    </div>
+
+    <script src="words.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
