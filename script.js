@@ -125,7 +125,7 @@ function createFloatingElement(x, y, isText = false) {
     }, 1000);
 }
 
-bebe.addEventListener('click', (e) => {
+bebe.addEventListener('pointerdown', (e) => {
     score++;
     scoreElement.textContent = score;
 

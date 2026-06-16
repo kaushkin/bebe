@@ -12,10 +12,15 @@ body {
     background-size: 400% 400%;
     animation: gradientBG 12s ease infinite;
     height: 100vh;
+    height: 100dvh; /* Fix for mobile browser UI */
     overflow: hidden;
     color: #ff4081;
     user-select: none;
     transition: filter 0.5s ease;
+    /* Оптимизация под тапы на телефонах */
+    overscroll-behavior: none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 body.crazy-bg {
@@ -253,6 +258,8 @@ body.crazy-bg {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
 }
 
 @keyframes zoomOut {
@@ -280,4 +287,68 @@ body.crazy-bg {
 @keyframes pop {
     0% { opacity: 1; transform: scale(0.5) translate(0, 0) rotate(0deg); }
     100% { opacity: 0; transform: scale(1.5) translate(var(--tx), var(--ty)) rotate(180deg); }
+}
+
+/* =========================================
+   МОБИЛЬНАЯ АДАПТАЦИЯ (ТЕЛЕФОНЫ)
+   ========================================= */
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 15px;
+    }
+
+    .header h1 {
+        font-size: 1.4rem;
+        gap: 5px;
+    }
+
+    .header h1 img {
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    .title-section .level-indicator {
+        font-size: 1.3rem !important;
+    }
+
+    .score-board {
+        font-size: 1.1rem;
+        padding: 6px 15px;
+    }
+
+    .start-content {
+        padding: 25px 15px;
+        width: 90%;
+    }
+
+    .start-content h2 {
+        font-size: 3rem;
+    }
+
+    .start-content p {
+        font-size: 1.6rem;
+    }
+    
+    .start-content .credits {
+        font-size: 1.2rem;
+        margin-bottom: 25px;
+    }
+
+    .start-btn {
+        font-size: 2rem;
+        padding: 12px 35px;
+    }
+
+    .level-up-text {
+        font-size: 2.2rem;
+    }
+
+    .floating-text {
+        font-size: 1.5rem;
+    }
+    
+    .sparkle {
+        width: 30px;
+        height: 30px;
+    }
 }
