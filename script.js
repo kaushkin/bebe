@@ -10,14 +10,27 @@ const bestScoreEl = document.getElementById('bestScore');
 const playArea = document.getElementById('playArea');
 
 if (typeof GAME_TEXT !== 'undefined') {
-    document.getElementById('uiTitle').innerHTML = GAME_TEXT.title;
-    document.getElementById('uiSubtitle').innerHTML = GAME_TEXT.subtitle;
-    document.getElementById('uiCredits').innerHTML = GAME_TEXT.credits;
-    startBtn.innerHTML = GAME_TEXT.startButton;
-    document.getElementById('uiGameOverTitle').innerHTML = GAME_TEXT.gameOverTitle;
-    document.getElementById('uiScoreText').innerHTML = GAME_TEXT.scoreText;
-    document.getElementById('uiBestScoreText').innerHTML = GAME_TEXT.bestScoreText;
-    restartBtn.innerHTML = GAME_TEXT.restartButton;
+    const uiTitle = document.getElementById('uiTitle');
+    if (uiTitle) uiTitle.innerHTML = GAME_TEXT.title;
+    
+    const uiSubtitle = document.getElementById('uiSubtitle');
+    if (uiSubtitle) uiSubtitle.innerHTML = GAME_TEXT.subtitle;
+    
+    const uiCredits = document.getElementById('uiCredits');
+    if (uiCredits) uiCredits.innerHTML = GAME_TEXT.credits;
+    
+    if (startBtn && GAME_TEXT.startButton) startBtn.innerHTML = GAME_TEXT.startButton;
+    
+    const uiGameOverTitle = document.getElementById('uiGameOverTitle');
+    if (uiGameOverTitle) uiGameOverTitle.innerHTML = GAME_TEXT.gameOverTitle;
+    
+    const uiScoreText = document.getElementById('uiScoreText');
+    if (uiScoreText) uiScoreText.innerHTML = GAME_TEXT.scoreText;
+    
+    const uiBestScoreText = document.getElementById('uiBestScoreText');
+    if (uiBestScoreText) uiBestScoreText.innerHTML = GAME_TEXT.bestScoreText;
+    
+    if (restartBtn && GAME_TEXT.restartButton) restartBtn.innerHTML = GAME_TEXT.restartButton;
 }
 
 let animationId;
